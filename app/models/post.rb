@@ -4,5 +4,3 @@ class Post < ActiveRecord::Base
   validates :summary, length: { maximum: 250}
   validates :category, inclusion: { in: ["Fiction", "Non-Fiction"]}
 end
-
-Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.
