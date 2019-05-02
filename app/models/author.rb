@@ -1,5 +1,5 @@
 class Author < ActiveRecord::Base
-  validates :name, presence: true
+  validates_presence_of(:name)
   validates :name, uniqueness: true
-  validates_numericality_of :phone_number, {equal_to: 10}
+  validates :phone_number, length: { is: 10 }
 end
